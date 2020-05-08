@@ -15,6 +15,7 @@ export default {
   resolve: {
     extensions: ['.ts', '.vue', '.json', '.js',],
     alias: {
+      vue$: 'vue/dist/vue.min.js',
       'assets': utils.resolve('assets'),
       'pages': utils.resolve('src/pages'),
       'static': utils.resolve('static'),
@@ -77,8 +78,8 @@ export default {
     new VueLoaderPlugin(),
     /* tslint:disable-next-line */
     new CopyWebpackPlugin([{
-      from: utils.resolve('static/img'),
-      to: utils.resolve('dist/static/img'),
+      from: utils.resolve('static/'),
+      to: utils.resolve('dist/static/'),
       toType: 'dir'
     }]),
     new WebpackBar()

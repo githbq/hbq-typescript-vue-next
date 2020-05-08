@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <span>33333</span>
+    <span>hello word</span>
+    <aaa-bbb />
     <VueComponentGood />
   </div>
 </template>
@@ -9,8 +10,14 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import VueComponentGood from './components/VueComponentGood.vue'
+
+const httpVueLoader = (window as any).httpVueLoader
+
 @Component({
-  components: { VueComponentGood }
+  components: {
+    VueComponentGood,
+    aaaBbb: httpVueLoader('/static/aaa.vue')
+  }
 })
 export default class App extends Vue { }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="center">
-    <a class="text">{{title}}111</a>
+    <a class="text">{{title}} ok </a>
   </div>
 </template>
 
@@ -17,7 +17,7 @@
     },
     methods: {
       output (message: string) {
-        return '1231'
+        return 'you are right'
       }
     },
     mounted () { 
